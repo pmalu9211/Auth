@@ -1,0 +1,8 @@
+useEffect can't be used in the server side rendering, coz useEffect requires for a component to mount or render/rerender that dosne't takes place at the server
+And the useSession is an hook that rerenders the component when the fetched.
+
+https://chatgpt.com/share/9942b58e-91bb-4fee-b093-b6dd3dbad454
+https://chatgpt.com/share/9942b58e-91bb-4fee-b093-b6dd3dbad454
+
+
+manashreeffr@gmail.com neon db
