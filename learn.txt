@@ -4,5 +4,47 @@ And the useSession is an hook that rerenders the component when the fetched.
 https://chatgpt.com/share/9942b58e-91bb-4fee-b093-b6dd3dbad454
 https://chatgpt.com/share/9942b58e-91bb-4fee-b093-b6dd3dbad454
 
+https://chatgpt.com/share/07617adf-8369-4ccd-bee6-89515318af44
+https://chatgpt.com/share/07617adf-8369-4ccd-bee6-89515318af44
+
 
 manashreeffr@gmail.com neon db
+
+
+
+
+we can send different types of data in different forms and we can see that in 
+
+https://chatgpt.com/share/9029f3b1-deee-4609-a3a9-c8afb679e2bc
+
+const contentType = req.headers.get("Content-Type");
+
+æ pratham: 'is the man' å
+ POST /api/user/create 200 in 25ms
+data  application/json
+æ pratham: 'is the man' å
+ POST /api/user/create 200 in 6ms
+data  text/html
+æ pratham: 'is the man' å
+ POST /api/user/create 200 in 
+ 
+  // const data = await req.json();
+  // const data = await req.text();
+  // const data = await req.formData();
+
+    // Extract specific fields
+  // const name = formData.get("name");
+  // const age = formData.get("age");
+
+
+ and we have to convert the data in the respective form by using the req.json() for json
+ req.fromdata() for the formdata type and so on
+ don't forget to await it
+
+  readonly arrayBuffer: () => Promise<ArrayBuffer>
+  readonly blob: () => Promise<Blob>
+  readonly formData: () => Promise<FormData>
+  readonly json: () => Promise<unknown>
+  readonly text: () => Promise<string>
+
+

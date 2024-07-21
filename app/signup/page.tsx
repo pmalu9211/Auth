@@ -1,10 +1,10 @@
 // import { PrismaClient } from "@prisma/client/extension";
 "use client";
 
-import Input from "../../components/Input";
+import Input from "../components/Input";
 import { useState } from "react";
-import Button from "../../components/Button";
-import createUser from "../../../utils/user";
+import Button from "../components/Button";
+import createUser from "../utils/user";
 
 export default async function SignUp() {
   const [email, setEmail] = useState("");
