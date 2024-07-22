@@ -1,3 +1,5 @@
+"use client";
+
 import { SetStateAction } from "react";
 
 export default function Input({
@@ -9,8 +11,15 @@ export default function Input({
 }) {
   return (
     <>
-      <label>{label}</label>
-      <input onChange={(e) => onChange(e.target.value)} type="text" />;
+      <div>
+        <label className="block my-4 bg-blue-300">{label}</label>
+        <input
+          className="bg-slate-200"
+          onChange={(e) => onChange(e.target.value)}
+          type="text"
+        />
+        ;
+      </div>
     </>
   );
 }

@@ -8,7 +8,8 @@ export async function POST(req: NextRequest) {
   const contentType = req.headers.get("Content-Type");
   console.log("content type", contentType);
 
-  const data = await req.json();
+  let data = await req.json();
+  console.log(data);
 
   const {
     name,

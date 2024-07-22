@@ -1,32 +1,42 @@
-// import { PrismaClient } from "@prisma/client/extension";
 "use client";
 
 import Input from "../components/Input";
 import { useState } from "react";
-import Button from "../components/Button";
-import createUser from "../utils/user";
+import axios from "axios";
 
-export default async function SignUp() {
+const registerUser = async (email: string, password: string, name: string) => {
+  try {
+    await axios.post("/api/user/create", { email, password, name });
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+export default function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
+
+  async function createUser(e: React.FormEvent) {
+    e.preventDefault();
+    try {
+      registerUser(email, password, name);
+    } catch (e) {
+      console.log(e);
+    }
+  }
 
   return (
     <div>
       <Input onChange={(ee) => setName(ee)} label="Name"></Input>
       <Input onChange={(ee) => setEmail(ee)} label="Email"></Input>
       <Input onChange={(ee) => setPassword(ee)} label="Password"></Input>
-      <Button
-        name="Submit"
-        onClick={() => createUser(name, email, password)}
-      ></Button>
+      <button
+        className="bg-black text-white p-4 rounded-lg"
+        onClick={(e: React.SyntheticEvent) => createUser(e)}
+      >
+        Submit
+      </button>
     </div>
   );
 }
-
-// const prisma = new PrismaClient()
-// 3
-// 4export default async function handle(req, res) {
-// 5  const posts = await prisma.post.findMany()
-// 6  res.json(posts)
-// 7}
