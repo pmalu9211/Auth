@@ -64,5 +64,7 @@ model Profile {
   userFirstName String // relation scalar field (used in the `@relation` attribute above)
   userLastName  String // relation scalar field (used in the `@relation` attribute above)
 
-  @@unique([userFirstName, userLastName]) //combination of userFirstName and userLastName should be unique
+  @@unique([userFirstName, userLastName]) //combination of userFirstName and userLastName should be 
+ 
+  
 }
